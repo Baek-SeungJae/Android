@@ -12,7 +12,9 @@ import android.widget.ImageView;
 // 1. 이벤트에 반응하는(미리 정해져 있음) 클래스를 상속받는다.
 // 2. 메소드를 오버라이딩 한다.
 //  ex) 버튼을 클릭할 때 실행될 리스너 => View.OnClickListener의 OnClick메소드가 호출
+
 public class Challenge03 extends AppCompatActivity implements View.OnClickListener {
+
     ImageView img01;
     ImageView img02;
     Button btn01;
@@ -43,6 +45,7 @@ public class Challenge03 extends AppCompatActivity implements View.OnClickListen
         if(v.getId()==R.id.button1)
             imageUp();
     }
+
     public void imageDown(){
         //ImageView에 이미지리소스를 추가
         img02.setImageResource(R.drawable.beach);
