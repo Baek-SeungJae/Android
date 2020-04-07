@@ -5,14 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.activity.ListViewTestActivity">
+    tools:context=".view.activity.SelectView_ExamActity">
 
-    <TextView
-        android:id="@+id/listTxt"
+    <ListView
+        android:id="@+id/exam_listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <ListView
-        android:id="@+id/listview1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 </LinearLayout>

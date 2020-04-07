@@ -1,9 +1,11 @@
-package exam.day03view.selectView.activity;
+package exam.day03view.selectView.view.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,7 +21,6 @@ public class CustomRowTestActivity extends AppCompatActivity {
     //1. 리스트뷰에 출력할 데이터
     String[] datalist = {"java", "oracle", "HTML5", "CSS", "javascript", "servlet", "jsp", "spring", "hadoop", "flume", "sqoop", "hive", "R", "android"};
     List<String> arrlist = new ArrayList<String>();
-
     ListView listView;
     TextView textView;
 
@@ -43,6 +44,19 @@ public class CustomRowTestActivity extends AppCompatActivity {
         //이벤트 연결
         MyListener listener = new MyListener();
         listView.setOnItemClickListener(listener);
+/*
+        Button custBtn = findViewById(R.id.btncust);
+        custBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d("test","반응있나");
+            }
+        });
+ */
+    }
+
+    public void custBtn(View v) {
+        Log.d("test", "반응있나");
     }
 
     class MyListener implements AdapterView.OnItemClickListener {
