@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- SelectView_ExamActity를 등록,
+         intent-filter를 이용해서 action을 정의-->
         <activity android:name=".view.activity.SelectView_ExamActity">
+            <intent-filter>
+                <action android:name="com.exam.selectview"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.ListViewTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
