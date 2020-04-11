@@ -19,5 +19,4 @@ public class ReadActivity extends Activity {
 		TextView t = (TextView)findViewById(R.id.show);
 		t.setText(product);
 	}
-
 }

@@ -78,7 +78,11 @@ public class MainActivity extends
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this, ReadActivity.class);
-        intent.putExtra("product", datalist.get(position).substring(datalist.get(position).indexOf(", ") + 1, datalist.get(position).length()));
+        if(datalist.size()>0) {
+            intent.putExtra("product", datalist.get(position).substring(datalist.get(position).indexOf(", ") + 1, datalist.get(position).length()));
+        } else if(datalist2.size()>0){
+            intent.putExtra("product", datalist2.get(position).get("name")+", "+datalist2.get(position).get("info"));
+        }
         startActivity(intent);
     }
 }
