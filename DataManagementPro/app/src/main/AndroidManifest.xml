@@ -21,7 +21,8 @@
         <activity android:name=".permission.RuntimePermissionTest" />
         <activity android:name=".permission.BasicPermissionTest" />
         <activity android:name=".permission.MainActivity" />
-        <activity android:name=".EditText.FileMgrExam">
+        <activity android:name=".exam.ReadActivity" />
+        <activity android:name=".exam.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
