@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">support_lib</string>
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
+    <string name="kakao_app_key">ec10b6acdf0711dda6cf9ad61c0cecd0</string>
+</resources>
