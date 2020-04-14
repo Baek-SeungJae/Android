@@ -22,6 +22,7 @@ import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 public class MainActivity extends AppCompatActivity {
     //이메일, 나잇대, 성별, 생일값 String 추가됨
     String strNickname, strProfile, strEmail, strAgeRange, strGender, strBirthday;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,12 +81,13 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onFailure(ErrorResult errorResult) {
                                         int result = errorResult.getErrorCode();
-                                        if(result == ApiErrorCode.CLIENT_ERROR_CODE) {
+                                        if (result == ApiErrorCode.CLIENT_ERROR_CODE) {
                                             Toast.makeText(getApplicationContext(), "네트워크 연결이 불안정합니다. 다시 시도해 주세요.", Toast.LENGTH_SHORT).show();
                                         } else {
                                             Toast.makeText(getApplicationContext(), "회원탈퇴에 실패했습니다. 다시 시도해 주세요.", Toast.LENGTH_SHORT).show();
                                         }
                                     }
+
                                     @Override
                                     public void onSessionClosed(ErrorResult errorResult) {
                                         Toast.makeText(getApplicationContext(), "로그인 세션이 닫혔습니다. 다시 로그인해 주세요.", Toast.LENGTH_SHORT).show();
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(intent);
                                         finish();
                                     }
+
                                     @Override
                                     public void onNotSignedUp() {
                                         Toast.makeText(getApplicationContext(), "가입되지 않은 계정입니다. 다시 로그인해 주세요.", Toast.LENGTH_SHORT).show();
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(intent);
                                         finish();
                                     }
+
                                     @Override
                                     public void onSuccess(Long result) {
                                         /*

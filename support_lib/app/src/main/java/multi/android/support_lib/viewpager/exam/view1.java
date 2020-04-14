@@ -1,4 +1,4 @@
-package multi.android.support_lib.fragment;
+package multi.android.support_lib.viewpager.exam;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,9 +12,9 @@ import multi.android.support_lib.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SecondFragment extends Fragment {
+public class view1 extends Fragment {
 
-    public SecondFragment() {
+    public view1() {
         // Required empty public constructor
     }
 
@@ -22,6 +22,6 @@ public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_second2,container,false);
+        return inflater.inflate(R.layout.view1,container,false);
     }
 }

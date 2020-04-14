@@ -37,20 +37,35 @@
             android:onClick="btn_click"
             android:tag="2"
             android:text="세번째뷰" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btn_click"
+            android:tag="3"
+            android:text="네번째뷰" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/container"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragmentPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <!-- 이 안에 프레그먼트를 정의하세요 -->
-        <fragment
-            android:id="@+id/fragment"
-            android:name="multi.android.support_lib.fragment3.fragment_main"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 이 안에 프레그먼트를 정의하세요 -->
+            <fragment
+                android:id="@+id/fragment"
+                android:name="multi.android.support_lib.fragment3.fragment_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </androidx.viewpager.widget.ViewPager>
 
 
 </LinearLayout>
