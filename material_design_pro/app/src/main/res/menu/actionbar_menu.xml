@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="검색"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        />
+    <item
+        android:id="@+id/option1"
+        android:icon="@android:drawable/btn_star"
+        android:title="즐겨찾기"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/option2"
+        android:title="공유">
+        <menu>
+            <item
+                android:id="@+id/option2_1"
+                android:title="카카오톡" />
+            <item
+                android:id="@+id/option2_2"
+                android:title="SMS" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/option3"
+        android:title="설정" />
+</menu>
