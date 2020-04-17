@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ public class AppbarTest extends AppCompatActivity {
     FloatingActionButton fab;
     ListView listView;
     ArrayList<String> datalist = new ArrayList<String>();
+    BottomAppBar bottomAppBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class AppbarTest extends AppCompatActivity {
         toolbarLayout = findViewById(R.id.toolbarLayout);
         fab = findViewById(R.id.fab);
         listView = findViewById(R.id.listview);
-
+        bottomAppBar = findViewById(R.id.bottomAppBar);
         // 어댑터 연결
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, datalist);
         listView.setAdapter(adapter);
@@ -56,6 +58,10 @@ public class AppbarTest extends AppCompatActivity {
         toolbarLayout.setCollapsedTitleGravity(Gravity.CENTER);
         toolbarLayout.setExpandedTitleGravity(Gravity.RIGHT + Gravity.TOP);
 
+        //
+        bottomAppBar.setFabAlignmentMode(BottomAppBar.FAB_ALIGNMENT_MODE_CENTER);
+        bottomAppBar.setFabCradleRoundedCornerRadius(100);
+        bottomAppBar.setFabCradleMargin(20);
         // 플로팅 액션 버튼을 눌렀을 때
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
