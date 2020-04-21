@@ -1,4 +1,4 @@
-package multi.android.gotchar;
+package multi.android.gotchar.member.login;
 
 
 import android.content.Intent;
@@ -17,6 +17,9 @@ import com.kakao.usermgmt.callback.UnLinkResponseCallback;
 import com.kakao.usermgmt.response.MeV2Response;
 import com.kakao.util.OptionalBoolean;
 import com.kakao.util.exception.KakaoException;
+
+import multi.android.gotchar.MainActivity;
+import multi.android.gotchar.R;
 
 public class LoginActivity extends AppCompatActivity {
     private SessionCallback sessionCallback;

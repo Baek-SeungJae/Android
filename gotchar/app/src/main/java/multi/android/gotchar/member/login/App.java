@@ -1,4 +1,4 @@
-package multi.android.gotchar;
+package multi.android.gotchar.member.login;
 
 import android.app.Application;
 import android.content.Context;

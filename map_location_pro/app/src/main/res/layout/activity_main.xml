@@ -5,13 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".map.MainActivity" >
+    tools:context=".map.MapTestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/circlemap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addCircle"
+            android:text="원출력" />
+
+        <Button
+            android:id="@+id/linemap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeMarker"
+            android:text="마커변경" />
+
+        <Button
+            android:id="@+id/markermap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setMarker"
+            android:text="마커" />
+
+        <Button
+            android:id="@+id/movemap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setPosition"
+            android:text="멀티캠퍼스로 이동" />
+    </LinearLayout>
 
     <fragment
-        android:id="@+id/myMap"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        android:id="@+id/map"/>
 
 </LinearLayout>
