@@ -5,19 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="30dp"
-        android:background="#5F83A6"
-        />
+    tools:context=".AsyncTest">
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btn_click"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="useMessageHandlerExam2"
-        android:text="숫자 출력하기" />
+        android:onClick="btn_click"
+        android:text="Button" />
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
 </LinearLayout>

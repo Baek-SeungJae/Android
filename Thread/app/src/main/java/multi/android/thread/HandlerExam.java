@@ -26,7 +26,7 @@ public class HandlerExam extends AppCompatActivity {
             }
         };
     }
-
+/*
     public void useMessageHandlerExam(View v) {
         new Thread(new Runnable() {
             @Override
@@ -41,4 +41,5 @@ public class HandlerExam extends AppCompatActivity {
             }
         }).start();
     }
+   */
 }

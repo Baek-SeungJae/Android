@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         intent = getIntent();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Bundle bundle = new Bundle(1);
+        Bundle bundle = new Bundle();
         bundle.putString("strName",intent.getStringExtra("name"));
         bundle.putString("strProfile",intent.getStringExtra("profile"));
         bundle.putString("strEmail",intent.getStringExtra("email"));
@@ -46,12 +47,10 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("strBirthday",intent.getStringExtra("birthday"));
         v1.setArguments(bundle);
 
-        /*
         FragmentTransaction transaction;
         transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment, v1);
         transaction.commit();
-        */
     }
     public void privacypolicy(View v){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -60,7 +59,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment, v2);
         transaction.addToBackStack("v2");
         transaction.commit();
-
     }
-
 }

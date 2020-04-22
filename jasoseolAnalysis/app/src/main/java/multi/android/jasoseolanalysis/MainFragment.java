@@ -37,4 +37,7 @@ public class MainFragment extends Fragment {
         sendBtn = v.findViewById(R.id.sendBtn);
         return v;
     }
+    public String getContent(){
+        return editText.getText().toString();
+    }
 }

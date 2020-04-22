@@ -1,6 +1,7 @@
 package multi.android.jasoseolanalysis;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressFragment pf = new ProgressFragment();
     ResultFragment rf = new ResultFragment();
     MainFragment mf = new MainFragment();
+    FragmentManager fragmentManager;
+    String content;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,13 +41,21 @@ public class MainActivity extends AppCompatActivity {
             textView.append(token.getMorph()+" "+token.getPos()+'\n');
         }
         */
+        fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction;
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment,mf);
+        transaction.commit();
     }
 
     public void sendBtn(View v){
-        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction;
+        Bundle bundle = new Bundle();
         transaction = fragmentManager.beginTransaction();
+        content = mf.getContent();
+        bundle.putString("content",content);
         transaction.replace(R.id.fragment,rf);
+        rf.setArguments(bundle);
         transaction.commit();
     }
 }
