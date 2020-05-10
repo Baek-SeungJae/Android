@@ -22,7 +22,7 @@
         <activity android:name=".permission.BasicPermissionTest" />
         <activity android:name=".permission.MainActivity" />
         <activity android:name=".exam.ReadActivity" />
-        <activity android:name=".exam.MainActivity">
+        <activity android:name=".oracle.DBActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
