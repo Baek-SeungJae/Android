@@ -100,7 +100,6 @@ public class ChatClientActivity extends AppCompatActivity {
             }
         });
         thread.start();
-        Log.d("testtest","여기");
         //pw.println(message);
     }
 
@@ -122,7 +121,7 @@ public class ChatClientActivity extends AppCompatActivity {
             //서버와 접속하여 서버가 보내오는 메시지를 읽을 수 있도록 작성하세요
             try {
 
-                String ip = "14.47.113.175";
+                String ip = "70.12.224.117";
                 int port = 12345;
                 socket = new Socket(ip, port);
                 if (socket != null) {
@@ -149,7 +148,7 @@ public class ChatClientActivity extends AppCompatActivity {
                                     socket.close();
                                     break;
                                 } catch(IOException e1) {
-
+                                    break;
                                 }
                             }
                         }

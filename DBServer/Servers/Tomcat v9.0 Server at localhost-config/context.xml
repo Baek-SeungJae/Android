@@ -19,7 +19,7 @@
 		auth="Container"
 		type="javax.sql.DataSource"
 		driverClassName="oracle.jdbc.OracleDriver"
-		url="jdbc:oracle:thin:@70.12.224.117:1521:xe"
+		url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
 		username="gotcha"
 		password="gotcha" maxTotal="20" maxIdle="10" maxWaitMillis="-1" />
 
