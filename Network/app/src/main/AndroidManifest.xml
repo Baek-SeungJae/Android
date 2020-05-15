@@ -14,7 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".chat.StartNetWork"></activity>
         <activity android:name=".chat.ChatClientActivity" />
-        <activity android:name=".arduino.Serial_01">
+        <activity android:name=".arduino.Serial_02">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
